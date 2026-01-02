@@ -120,13 +120,13 @@ export default function App() {
                       <span className="text-neutral-600 mr-2">{q.id}.</span>
                       {q.text}
                     </p>
-                    <span
+                    {/* <span
                       className={`text-[10px] font-medium whitespace-nowrap ${
                         q.reverse ? "text-red-600" : "text-blue-600"
                       }`}
                     >
                       {q.reverse ? "역문항" : "정문항"}
-                    </span>
+                    </span> */}
                   </div>
 
                   <div className="mt-4 grid grid-cols-1 sm:grid-cols-5 gap-2">
@@ -162,26 +162,19 @@ export default function App() {
                 </div>
               ))}
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between pt-2">
-                <button
-                  onClick={reset}
-                  className="rounded-xl border border-neutral-200 px-4 py-3 text-sm hover:border-neutral-600"
-                >
-                  초기화
-                </button>
-
-                <button
-                  disabled={!canSubmit}
-                  onClick={() => setSubmitted(true)}
-                  className={`rounded-xl px-5 py-3 text-sm font-semibold transition ${
-                    canSubmit
-                      ? "bg-neutral-900 text-white hover:bg-neutral-200"
-                      : "bg-neutral-200 text-neutral-600 cursor-not-allowed"
-                  }`}
-                >
-                  결과 보기
-                </button>
-              </div>
+              <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
+              <button
+                disabled={!canSubmit}
+                onClick={() => setSubmitted(true)}
+                className={`rounded-xl px-5 py-3 text-sm font-semibold transition ${
+                  canSubmit
+                    ? "bg-neutral-900 text-white hover:bg-neutral-200"
+                    : "bg-neutral-200 text-neutral-600 cursor-not-allowed"
+                }`}
+              >
+                결과 보기
+              </button>
+            </div>
 
               {!canSubmit && (
                 <p className="text-xs text-neutral-600">
