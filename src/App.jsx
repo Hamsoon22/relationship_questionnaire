@@ -85,7 +85,7 @@ export default function App() {
             <div className="p-6 md:p-8 border-b border-neutral-200">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h1 className="text-xl md:text-2xl font-semibold">부부 상호작용 체크리스트</h1>
+                  <h1 className="text-xl md:text-2xl font-semibold">연인 및 부부 관계 상호작용 체크리스트</h1>
                   <p className="text-sm text-neutral-600 mt-2">
                     10문항 · 5점 척도 · 제출하면 평균 점수가 계산됩니다.
                   </p>
